@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quizlet Library</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Quizlet Library</h1>
+        <p>You can find quizlets for a variety of subjects below</p>
+        <img src="/Images/1024.0e9431247202b7b.png" alt="Logo" class="header-logo">
+    </header>
+
+    <section class="library">
+        <h2>Search Library</h2>
+
+        <select id="SubjectSelect">
+            <option value="">Select a subject</option>
+            <option value="history">History</option>
+            <option value="science">Science</option>
+            <option value="math">Mathematics</option>
+            <option value="spanish">Spanish</option>
+        </select>
+
+        <div class="search-container">
+            <input
+                type="text"
+                id="searchBar"
+                placeholder="Search Quizlets..."
+                autocomplete="off"
+            >
+            <div id="quizletResults" class="search-dropdown"></div>
+        </div>
+    </section>
+    <p class="hint">Pick a subject, then start typing to find a Quizlet.</p>
+
+    <dialog id="confirmDialog" aria-labelledby="confirmTitle">
+    <div class="dialog-content">
+        <h3 id="confirmTitle">Leaving this page</h3>
+        <p>You're about to be redirected to Quizlet. Do you want to continue?</p>
+        <div class="dialog-buttons">
+            <button type="button" id="stayBtn" class="btn btn-secondary">Stay</button>
+            <button type="button" id="continueBtn" class="btn btn-primary">Continue</button>
+        </div>
+    </div>
+</dialog>
+
+    </section>
+
+    <footer>
+        <p>hi</p>
+    </footer>
+</body>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+</body>
+</html>

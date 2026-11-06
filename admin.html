@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex">
+    <title>Admin | Quizlet Library</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Admin Panel</h1>
+        <p>Add new quizlets to the library</p>
+    </header>
+
+    <section class="library">
+        <form id="loginForm" class="admin-form">
+            <h2>Log in</h2>
+            <input type="email" id="email" class="admin-input" placeholder="Email" required>
+            <input type="password" id="password" class="admin-input" placeholder="Password" required>
+            <button type="submit" class="btn btn-primary">Log in</button>
+        </form>
+
+        <form id="addForm" class="admin-form" style="display:none;">
+    <h2 id="formTitle">Add a Quizlet</h2>
+    <input type="text" id="title" class="admin-input" placeholder="Quizlet name" required>
+    <select id="subject" class="admin-input" required>
+        <option value="">Select a subject</option>
+        <option value="history">History</option>
+        <option value="science">Science</option>
+        <option value="math">Mathematics</option>
+        <option value="spanish">Spanish</option>
+    </select>
+    <input type="url" id="url" class="admin-input" placeholder="Quizlet link (https://...)" required>
+    <button type="submit" id="submitBtn" class="btn btn-primary">Add quizlet</button>
+    <button type="button" id="cancelEditBtn" class="btn btn-secondary" style="display:none;">Cancel edit</button>
+    <button type="button" id="logoutBtn" class="btn btn-secondary">Log out</button>
+    <p id="statusMsg"></p>
+</form>
+
+<div id="manageSection" style="display:none;">
+    <h2>Manage Quizlets</h2>
+    <input type="text" id="adminSearch" class="admin-input" placeholder="Filter by name...">
+    <div id="quizletList"></div>
+</div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
